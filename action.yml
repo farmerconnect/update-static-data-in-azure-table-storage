@@ -1,0 +1,25 @@
+name: 'Update Static Data In Azure Table Storage'
+description: 'A Github action that includes data in a azure table storage from a csv file'
+branding:
+  icon: upload
+  color: blue
+inputs:
+  table_name:
+    description: "The name of the table to insert into."
+    required: true
+  connection_string:
+    description: "The connection string for the storage account."
+    required: true
+  csv_file_path:
+    description: "The csv file path for import."
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - '-t'
+  - ${{ inputs.table_name }}
+  - '-c'
+  - ${{ inputs.connection_string }}
+  - '-p'
+  - ${{ inputs.csv_file_path }}

@@ -1,0 +1,12 @@
+﻿global using CommandLine;
+global using CsvHelper;
+global using CsvHelper.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.WindowsAzure.Storage;
+global using Microsoft.WindowsAzure.Storage.Table;
+global using System.Globalization;
+global using UpdateStaticDataInAzureTableStorage;
+global using UpdateStaticDataInAzureTableStorage.Entities;
+global using static CommandLine.Parser;
