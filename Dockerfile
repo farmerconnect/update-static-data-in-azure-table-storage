@@ -5,11 +5,6 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 as build-env
 COPY . ./
 RUN dotnet publish ./UpdateStaticDataInAzureTableStorage/UpdateStaticDataInAzureTableStorage.csproj -c Release -o out --no-self-contained
 
-# Label the container
-LABEL maintainer="Tiago Almeida <tiago_almeida_rosa@hotmail.com>"
-LABEL repository="https://github.com/tiagoalmeidadarosa/update-static-data-in-azure-table-storage"
-LABEL homepage="https://github.com/tiagoalmeidadarosa/update-static-data-in-azure-table-storage"
-
 # Label as GitHub action
 LABEL com.github.actions.name="Update Static Data In Azure Table Storage"
 LABEL com.github.actions.description="A Github action that includes data in a azure table storage from a csv file."
