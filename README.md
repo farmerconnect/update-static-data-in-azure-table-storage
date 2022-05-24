@@ -30,10 +30,8 @@ jobs:
           separator: ","
           files: |
             *.csv
-          files_ignore: |
-            *.yml
             
-      - uses: farmerconnect/update-static-data-in-azure-table-storage@v2.0.0
+      - uses: farmerconnect/update-static-data-in-azure-table-storage@v2.0.2
         with:
           connection_string: ${{ secrets.AzureStorageConnectionString }}
           csv_file_paths: ${{ steps.changed-files.outputs.all_changed_files }}
