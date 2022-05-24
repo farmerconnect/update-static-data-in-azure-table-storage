@@ -17,4 +17,4 @@ runs:
   - '-c'
   - ${{ inputs.connection_string }}
   - '-p'
-  - ${{ inputs.csv_file_path }}
+  - ${{ inputs.csv_file_paths }}
