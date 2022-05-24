@@ -25,9 +25,13 @@ static async Task StartAnalysisAsync(ActionInputs inputs, IHost host)
     var cloudStorageAccount = CloudStorageAccount.Parse(inputs.ConnectionString);
     var tableClient = cloudStorageAccount.CreateCloudTableClient();
 
+    Console.WriteLine($"CSVFILEPATHS: {inputs.CsvFilePaths}");
+
     foreach (var csvFilePath in inputs.CsvFilePaths.Split(","))
     {
         var tableName = Path.GetFileNameWithoutExtension(csvFilePath);
+
+        Console.WriteLine($"TABLENAME: {tableName}");
 
         var table = tableClient.GetTableReference(tableName);
         await table.CreateIfNotExistsAsync();
