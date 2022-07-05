@@ -7,6 +7,7 @@
         public string? CountryName { get; set; }
         public string? CountryNumericCode { get; set; }
         public string? ExportLocation { get; set; }
+        public string? FriendlyName { get; set; }
         public string? Function { get; set; }
         public string? ImportLocation { get; set; }
         public bool IsAirport { get; set; }
@@ -17,6 +18,7 @@
         public string? NeutralLocation { get; set; }
         public string? Subdivision { get; set; }
         public string? PortCoordinates { get; set; }
+        public string? AirportCoordinates { get; set; }
         public string? City { get; set; }
         public string? ServiceProviderType { get; set; }
         public string? Website { get; set; }
